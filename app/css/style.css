@@ -189,7 +189,7 @@ button {
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: Montserrat,sans-serif
+  font-family: "Noto Sans JP",sans-serif
 }
 :root {
   --container: 1240px;
@@ -439,7 +439,9 @@ h1 {
 }
 @media screen and (min-width:768px) {
   .banner {
-    padding: 50px 0 78px
+    padding: 50px 0 78px;
+    background: url(../img/bgd-hero-des.png) no-repeat;
+    background-size: cover
   }
   .banner__inner {
     display: -webkit-box;
@@ -459,6 +461,16 @@ h1 {
     max-width: none;
     margin: 0;
     height: auto
+  }
+}
+@media screen and (min-width:1024px) {
+  .banner {
+    padding: 53px 0 78px;
+    margin-bottom: 100px
+  }
+  .banner__video {
+    max-width: 746px;
+    height: 420px
   }
 }
 .registration {
@@ -565,5 +577,70 @@ h1 {
   .registration button {
     font-size: 15px;
     padding: 10px 20px
+  }
+}
+@media screen and (min-width:1024px) {
+  .registration {
+    max-width: 365px;
+    padding: 20px 18px 18px
+  }
+  .registration label {
+    font-size: 20px
+  }
+  .registration__input {
+    margin-bottom: 27px
+  }
+  .registration button {
+    padding: 10px 20px
+  }
+}
+.paragraph {
+  padding: 40px 0 50px;
+  background: url(../img/bgd-paragraph.png) no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 5px 4px 13 0 var(--border-input);
+  box-shadow: 5px 4px 13 0 var(--border-input);
+  margin-bottom: 15px
+}
+.paragraph h2 {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--ocean);
+  margin-bottom: 5px
+}
+.paragraph p {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--white)
+}
+@media screen and (min-width:768px) {
+  .paragraph {
+    padding: 100px 0 110px
+  }
+  .paragraph h2 {
+    font-size: 25px;
+    line-height: 50px
+  }
+  .paragraph p {
+    font-size: 20px;
+    line-height: 40px
+  }
+}
+@media screen and (min-width:1024px) {
+  .paragraph {
+    padding: 200px 0 110px
+  }
+  .paragraph h2 {
+    font-size: 30px;
+    line-height: 60px;
+    margin-bottom: 10px
+  }
+  .paragraph p {
+    font-size: 25px;
+    line-height: 50px
   }
 }

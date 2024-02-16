@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 :root {
@@ -271,6 +271,8 @@ h1{
 
   @media screen and (min-width: 768px) {
     padding: 50px 0 78px;
+    background: url(../img/bgd-hero-des.png ) no-repeat;
+    background-size: cover;
 
     &__inner{
       display: flex;
@@ -288,7 +290,13 @@ h1{
   }
 
   @media screen and (min-width: 1024px) {
+    padding: 53px 0 78px;
+    margin-bottom: 100px;
 
+    &__video{
+      max-width: 746px;
+      height: 420px;
+    }
   }
 }
 
@@ -373,6 +381,75 @@ h1{
   }
 
   @media screen and (min-width: 1024px) {
+    max-width: 365px;
+    padding: 20px 18px 18px;
 
+    label{
+      font-size: 20px;
+    }
+
+    &__input{
+      margin-bottom: 27px;
+    }
+
+    button{
+      padding: 10px 20px;
+    }
   }
 }
+
+.paragraph{
+  padding: 40px 0 50px;
+  background: url(../img/bgd-paragraph.png) no-repeat;
+  background-size: cover;
+  box-shadow: 5px 4px 13 0px var(--border-input);
+  margin-bottom: 15px;
+
+  h2{
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--ocean);
+    margin-bottom: 5px;
+  }
+
+  p{
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 0 110px;
+
+    h2{
+      font-size: 25px;
+      line-height: 50px;
+    }
+
+    p{
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 200px 0 110px;
+
+    h2{
+      font-size: 30px;
+      line-height: 60px;
+      margin-bottom: 10px;
+    }
+
+    p{
+      font-size: 25px;
+      line-height: 50px;
+    }
+  }
+}
+
+
