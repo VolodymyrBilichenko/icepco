@@ -452,4 +452,58 @@ h1{
   }
 }
 
+.stages{
 
+  ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+  }
+
+  li{
+    background: url(../img/bgd-stages-1.jpg) no-repeat;
+    background-size: cover;
+    padding: 11px 14px;
+    flex: 1;
+    padding-bottom: 149px;
+    min-height: 231px;
+    height: 100%;
+    box-shadow: 3px 2px 7px 0px var(--border-input);
+
+    &:nth-child(2){
+      background: url(../img/bgd-stages-2.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    &:nth-child(3){
+      background: url(../img/bgd-stages-3.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    &:nth-child(4){
+      background: url(../img/bgd-stages-4.jpg) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  h2{
+    font-weight: 700;
+    font-size: 10px;
+    color: var(--blue);
+    line-height: 20px;
+    margin-bottom: 6px;
+
+    span{
+      font-size: 11px;
+    }
+  }
+
+  p{
+    font-size: 7px;
+    line-height: 14px;
+  }
+
+  @media screen and (min-width: 575px) {
+    
+  }
+}
