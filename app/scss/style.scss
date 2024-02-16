@@ -8,14 +8,12 @@
 }
 
 :root {
-  --container: 1280px;
+  --container: 1240px;
 
-  --black: #363636;
-  --blue: #2980B9;
-  --blue-opacity: rgba(203, 234, 255, 0.88);
-  --white: #FFF;
-  --white-opacity: rgba(255, 255, 255, 0.88);
-  --border: #E0E0E0;
+  --black: #000;
+  --white: #fff;
+  --blue: #000;
+  --ocean: #32ACFF;
 }
 
 body {
@@ -103,4 +101,113 @@ select {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+
+.header{
+  padding: 15px 0;
+  background: var(--black);
+  border-bottom: 1px solid var(--white);
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  img{
+    max-width: 57px;
+  }
+
+  &__links{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    li{
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &::before{
+        display: block;
+        content: '';
+        width: 2px;
+        height: 2px;
+        background: var(--white);
+        border-radius: 50%;
+
+        position: absolute;
+        right: -5px;
+        top: 8px;
+        // top: 50%;
+        // transform: translate(-50%);
+      }
+
+      &:last-child::before{
+        display: none;
+      }
+    }
+
+    a{
+      font-size: 7px;
+      line-height: 17px;
+      color: var(--white);
+      transition: all .3s ease;
+
+      &:hover{
+        color: var(--ocean);
+      }
+    }
+  }
+
+  @media screen and (min-width: 375px) {
+    &__inner{
+      gap: 20px;
+    }
+
+    &__links{
+      gap: 16px;
+    }
+
+    li::before{
+      right: -8px;
+    }
+
+    a{
+      font-size: 8px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__inner{
+      gap: 100px;
+      justify-content: left;
+    }
+
+    img{
+      max-width: 155px;
+    }
+
+    a{
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 19px 0;
+
+    a{
+      font-size: 20px;
+    }
+
+    &__links{
+      gap: 50px;
+  
+      li::before{
+        right: -25px;
+      }
+    }
+  }
 }
