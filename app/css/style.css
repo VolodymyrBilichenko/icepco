@@ -195,8 +195,13 @@ button {
   --container: 1240px;
   --black: #000;
   --white: #fff;
-  --blue: #000;
-  --ocean: #32ACFF
+  --white-opacity: #FFFFFF80;
+  --blue: #2347A3;
+  --ocean: #32ACFF;
+  --ocean-disabled: #7ECBFFCC;
+  --ocean-opacity: #A4DAFFB2;
+  --opacity-input-bgd: #FFFFFF4D;
+  --border-input: #00000080
 }
 body {
   margin: 0;
@@ -376,5 +381,189 @@ textarea {
   }
   .header__links li::before {
     right: -25px
+  }
+}
+h1 {
+  font-weight: 700;
+  font-size: 9px;
+  color: var(--white);
+  text-align: center;
+  max-width: 274px;
+  margin: 0 auto;
+  margin-bottom: 8px
+}
+@media screen and (min-width:768px) {
+  h1 {
+    font-size: 25px;
+    max-width: none;
+    margin-bottom: 50px
+  }
+}
+@media screen and (min-width:1024px) {
+  h1 {
+    font-size: 30px;
+    text-align: left;
+    max-width: 900px;
+    line-height: 48px;
+    margin: 0;
+    margin-bottom: 72px
+  }
+}
+.banner {
+  padding: 12px 0 20px;
+  background: url(../img/bgd-banner-mob.png) no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 5px 4px 12px 0 #0000008C;
+  box-shadow: 5px 4px 12px 0 #0000008C;
+  margin-bottom: 50px
+}
+.banner span {
+  color: var(--ocean)
+}
+.banner__video {
+  width: 100%;
+  max-width: 304px;
+  height: 171px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 20px
+}
+.banner__video iframe {
+  width: 100%;
+  max-width: 600px
+}
+@media screen and (min-width:768px) {
+  .banner {
+    padding: 50px 0 78px
+  }
+  .banner__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    gap: 15px
+  }
+  .banner__video {
+    max-width: none;
+    margin: 0;
+    height: auto
+  }
+}
+.registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 180px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: var(--ocean-opacity);
+  -webkit-box-shadow: 2.4690942764px 1.9752771854px 6.3208870888px 0 #0000008C;
+  box-shadow: 2.4690942764px 1.9752771854px 6.3208870888px 0 #0000008C;
+  padding: 10px 12px
+}
+.registration label {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 5px
+}
+.registration__input {
+  background: var(--opacity-input-bgd);
+  border: .5px solid var(--border-input);
+  margin-bottom: 15px;
+  padding: 7px;
+  font-size: 7px;
+  color: var(--black)
+}
+.registration__input::-webkit-input-placeholder {
+  font-size: 7px;
+  color: var(--black)
+}
+.registration__input::-moz-placeholder {
+  font-size: 7px;
+  color: var(--black)
+}
+.registration__input:-ms-input-placeholder {
+  font-size: 7px;
+  color: var(--black)
+}
+.registration__input::-ms-input-placeholder {
+  font-size: 7px;
+  color: var(--black)
+}
+.registration__input::placeholder {
+  font-size: 7px;
+  color: var(--black)
+}
+.registration button {
+  width: 100%;
+  background-color: var(--blue);
+  border-radius: 20px;
+  padding: 5px 20px;
+  font-weight: 700;
+  font-size: 8px;
+  color: var(--white);
+  border: 1px solid var(--border-input);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease
+}
+.registration button:hover {
+  background: var(--ocean);
+  border: 1px solid var(--white-opacity)
+}
+.registration button:disabled {
+  background: var(--ocean-disabled);
+  border: 1px solid var(--white-opacity)
+}
+@media screen and (min-width:768px) {
+  .registration {
+    margin: 0;
+    max-width: 300px;
+    padding: 30px 25px
+  }
+  .registration label {
+    font-size: 15px;
+    margin-bottom: 10px
+  }
+  .registration__input {
+    padding: 16px 10px;
+    font-size: 13px
+  }
+  .registration__input::-webkit-input-placeholder {
+    font-size: 13px
+  }
+  .registration__input::-moz-placeholder {
+    font-size: 13px
+  }
+  .registration__input:-ms-input-placeholder {
+    font-size: 13px
+  }
+  .registration__input::-ms-input-placeholder {
+    font-size: 13px
+  }
+  .registration__input::placeholder {
+    font-size: 13px
+  }
+  .registration button {
+    font-size: 15px;
+    padding: 10px 20px
   }
 }
