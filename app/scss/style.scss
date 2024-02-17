@@ -14,6 +14,7 @@
   --white: #fff;
   --white-opacity: #FFFFFF80; 
   --blue: #2347A3;
+  --dark-blue: #02174D;
   --ocean: #32ACFF;
   --ocean-disabled: #7ECBFFCC;
   --ocean-opacity: #A4DAFFB2;
@@ -453,6 +454,8 @@ h1{
 }
 
 .stages{
+  margin-top: -50px;
+  padding-bottom: 50px;
 
   ul{
     display: grid;
@@ -469,6 +472,9 @@ h1{
     min-height: 231px;
     height: 100%;
     box-shadow: 3px 2px 7px 0px var(--border-input);
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
 
     &:nth-child(2){
       background: url(../img/bgd-stages-2.jpg) no-repeat;
@@ -503,7 +509,102 @@ h1{
     line-height: 14px;
   }
 
-  @media screen and (min-width: 575px) {
-    
+  @media screen and (min-width: 768px) {
+    margin-top: -100px;
+
+    ul{
+      gap: 30px;
+    }
+
+    li{
+      max-width: 289px;
+      min-height: 421px;
+      padding: 20px 25px;
+    }
+
+    h2{
+      font-size: 18px;
+
+      span{
+        font-size: 20px;
+      }
+    }
+
+    p{
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 100px;
+
+    ul{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.discont{
+  padding: 30px 0;
+  background: var(--dark-blue);
+  border-bottom: 1px solid var(--white);
+
+  h2{
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 15px;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-align: center;
+
+    span{
+      color: var(--ocean);
+    }
+  }
+
+  p{
+    font-size: 8px;
+    line-height: 12px;
+    color: var(--white);
+  }
+
+  img{
+    max-width: 620px;
+    margin: 0 auto;
+    box-shadow: 5px 4px 12.800000190734863px 0px var(--border-input);
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    h2{
+      font-size: 30px;
+      line-height: 45px;
+      margin-bottom: 30px;
+    }
+
+    p{
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    img{
+      margin-bottom: 0;
+      margin-right: 30px;
+      max-width: 400px;
+    }
+
+    &__inner{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    padding: 65px 0;
+
+    img{
+      max-width: 620px;
+    }
   }
 }
