@@ -1,3 +1,5 @@
+// input number //
+
 const input = document.querySelector("#phone");
 const output = document.querySelector("#output");
 
@@ -24,3 +26,25 @@ const handleChange = () => {
 // listen to "keyup", but also "change" to update when the user selects a country
 input.addEventListener('change', handleChange);
 input.addEventListener('keyup', handleChange);
+
+
+
+// slider sum //
+
+const slider = document.getElementById("myRange");
+const demo = document.getElementById("demo");
+
+slider.oninput = function() {
+    demo.textContent = this.value.toLocaleString('us-USD') + ' $';
+};
+
+const range = document.getElementById("myRange");
+
+range.addEventListener("input", () => {
+    const value = range.value;
+    const min = range.min;
+    const max = range.max;
+    const percent = (value - min) / (max - min);
+
+    range.style.background = `linear-gradient(to right, #32acff ${percent*100}%, transparent ${percent*100}%)`;
+});
