@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Website">
     <meta name="keywords" content="Website">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/css/intlTelInput.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <!-- ** STYLE ** -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -91,6 +92,11 @@
                         id="registration__user" 
                         name="registration__user" 
                         placeholder="Ваш адрес электронной почты"
+                        class="registration__input"
+                    >
+                    <input 
+                        id="phone" 
+                        type="tel" 
                         class="registration__input"
                     >
                     <button type="submit">Присоединяйся к нам</button>
@@ -240,6 +246,11 @@
                         placeholder="Ваш адрес электронной почты"
                         class="registration__input"
                     >
+                    <input 
+                        id="phone" 
+                        type="tel" 
+                        class="registration__input"
+                    >
                     <button type="submit">Присоединяйся к нам</button>
                 </form>
             </div>
@@ -296,6 +307,11 @@
                         id="registration__user" 
                         name="registration__user" 
                         placeholder="Ваш адрес электронной почты"
+                        class="registration__input"
+                    >
+                    <input 
+                        id="phone" 
+                        type="tel" 
                         class="registration__input"
                     >
                     <button type="submit">Присоединяйся к нам</button>
@@ -458,17 +474,94 @@
             <button type="button">Начать сейчас</button>
         </div>
     </section>
+
+    <section class="paragraph paragraph_sec">
+        <div class="container">
+            <h2>
+                Часто задаваемые вопросы
+            </h2>
+            <p>
+                У вас есть еще вопросы?
+            </p>
+        </div>
+    </section>
+
+    <sections class="questions">
+        <div class="container">
+            <ul class="questions__list">
+                <li>
+                    <div class="questions__list__title">
+                        <img src="./img/question.png" alt="question ph">
+                        <strong>Как добиться высокой рентабельности инвестиций?</strong>
+                    </div>
+                    <p>
+                        С целью разработки оптимальной стратегии развития возобновляемой энергетики и повышения рентабельности мы начали сотрудничество с экспертами – представителями всемирно известных инвестиционных брокеров. Поэтому мы уверены в ее эффективности и готовы поделиться полной информацией. Если вы заинтересованы, заполните форму заявки, и наш менеджер свяжется с вами, чтобы предоставить дополнительную информацию о нашей стратегии и ответить на любые ваши вопросы.
+                    </p>
+                </li>
+                <li>
+                    <div class="questions__list__title">
+                        <img src="./img/question.png" alt="question ph">
+                        <strong>Какой опыт необходим, чтобы начать инвестировать?</strong>
+                    </div>
+                    <p>
+                        Вам не потребуется никакого опыта или специальной подготовки. Начать инвестировать в зеленые акции так же просто, как зарегистрироваться в любой социальной сети.
+                    </p>
+                </li>
+                <li>
+                    <div class="questions__list__title">
+                        <img src="./img/question.png" alt="question ph">
+                        <strong>Вы можете начать инвестировать в наши зеленые акции из любой страны. Мы работаем по всему миру и принимаем инвесторов со всего мира.</strong>
+                    </div>
+                    <p>
+                        В настоящее время доступ к нашим зеленым акциям открыт только для резидентов из Южной Кореи. Наша система была разработана экспертами из Европы и на данный момент мы предлагаем возможность инвестировать только нашим согражданам.
+                    </p>
+                </li>
+                <li>
+                    <div class="questions__list__title">
+                        <img src="./img/question.png" alt="question ph">
+                        <strong>Как присоединиться к нашей инвестиционной программе?</strong>
+                    </div>
+                    <p>
+                        Для участия заполните регистрационную форму вверху. После успешной регистрации ваш менеджер предоставит вам подробную инструкцию и ответит на все ваши вопросы.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </sections>
+
+    <section class="life">
+        <div class="container">
+            <div class="life__inner">
+                <h2>
+                    Измени свою жизнь вместе с  KEPCO и повлияй на жизнь своих родных
+                </h2>
+                <button type="button">
+                    Инвестируй сейчас
+                </button>
+            </div>
+        </div>
+    </section>    
 </main>
 
 <footer class="footer">
     <div class="container">
-        
+        <div class="footer__inner">
+            <img class="footer__logo" src="./img/logo.png" alt="logotype ph">
+            <div class="footer__certificate">
+                <img src="./img/sertificate.png" alt="certificate ph">
+                <p>
+                    Certificate for KOSHA 18001 & K-OHSMA 18001
+                </p>
+            </div>
+        </div>
     </div>
 </footer>
 
 
 <!-- swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- intl-tel-input -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/js/intlTelInput.min.js"></script>
 <!-- main JS -->
 <script src="js/app.min.js"></script>
 </body>

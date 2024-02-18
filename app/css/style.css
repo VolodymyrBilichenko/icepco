@@ -203,7 +203,8 @@ button {
   --ocean-opacity: #A4DAFFB2;
   --opacity-input-bgd: #FFFFFF4D;
   --border-input: #00000080;
-  --blur: #FFFFFF26
+  --blur: #FFFFFF26;
+  --pre-grey: #B4DFFC
 }
 body {
   margin: 0;
@@ -503,6 +504,7 @@ h1 {
   border: .5px solid var(--border-input);
   margin-bottom: 15px;
   padding: 7px;
+  width: 100%;
   font-size: 7px;
   color: var(--black)
 }
@@ -537,7 +539,8 @@ h1 {
   border: 1px solid var(--border-input);
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
-  transition: all .3s ease
+  transition: all .3s ease;
+  margin-top: 15px
 }
 .registration button:hover {
   background: var(--ocean);
@@ -644,6 +647,30 @@ h1 {
   .paragraph p {
     font-size: 25px;
     line-height: 50px
+  }
+}
+.paragraph_sec {
+  padding: 60px 0 55px;
+  background: url(../img/bgd-paragraph-2.png) no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 1.5614154339px 1.2491323948px 3.9972236156px 0 var(--border-input);
+  box-shadow: 1.5614154339px 1.2491323948px 3.9972236156px 0 var(--border-input);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse
+}
+@media screen and (min-width:768px) {
+  .paragraph_sec {
+    padding: 150px 0 100px
+  }
+}
+@media screen and (min-width:1024px) {
+  .paragraph_sec {
+    padding: 200px 0 135px
   }
 }
 .stages {
@@ -1172,6 +1199,7 @@ h1 {
   color: var(--black);
   font-weight: 700;
   font-size: 6px;
+  margin: 0 auto;
   width: 100%;
   max-width: 100px;
   background: var(--ocean-opacity);
@@ -1254,5 +1282,211 @@ h1 {
   }
   .users li:nth-child(5) {
     min-height: 500px
+  }
+}
+.questions__list {
+  margin-top: -50px
+}
+.questions__list li {
+  padding: 15px 20px;
+  background: var(--pre-grey);
+  margin-bottom: 20px;
+  -webkit-box-shadow: 2.9166667461px 2.3333332539px 7.4666666985px 0 var(--border-input);
+  box-shadow: 2.9166667461px 2.3333332539px 7.4666666985px 0 var(--border-input)
+}
+.questions__list li:last-child {
+  margin-bottom: 0
+}
+.questions__list__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px
+}
+.questions__list img {
+  max-width: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  -webkit-box-shadow: 2.9166667461px 2.3333332539px 7.4666666985px 0 var(--border-input);
+  box-shadow: 2.9166667461px 2.3333332539px 7.4666666985px 0 var(--border-input)
+}
+.questions__list strong {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+  color: var(--blue)
+}
+.questions__list p {
+  font-size: 9px;
+  line-height: 17px;
+  color: var(--black)
+}
+@media screen and (min-width:768px) {
+  .questions__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin-top: -100px
+  }
+  .questions__list li {
+    margin-bottom: 0;
+    padding: 25px 30px
+  }
+  .questions__list__title {
+    margin-bottom: 17px
+  }
+  .questions__list strong {
+    font-size: 18px;
+    line-height: 27px
+  }
+  .questions__list img {
+    max-width: 40px;
+    margin-right: 8px
+  }
+  .questions__list p {
+    font-size: 15px;
+    line-height: 30px
+  }
+}
+@media screen and (min-width:1024px) {
+  .questions__list {
+    margin-top: -135px
+  }
+  .questions__list img {
+    max-width: 50px
+  }
+}
+.life {
+  background: var(--dark-blue);
+  padding: 20px 0;
+  margin: 50px 0;
+  -webkit-box-shadow: 5px 4px 12.8000001907px 0 var(--border-input);
+  box-shadow: 5px 4px 12.8000001907px 0 var(--border-input)
+}
+.life h2 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 11px
+}
+.life button {
+  background: var(--blue);
+  border: 1px solid var(--white-opacity);
+  padding: 7px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  width: 100%;
+  max-width: 165px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 9px
+}
+.life button:hover {
+  background: var(--ocean)
+}
+.life button:disabled {
+  background: var(--ocean-disabled)
+}
+@media screen and (min-width:768px) {
+  .life {
+    padding: 30px 0
+  }
+  .life h2 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 21px
+  }
+  .life button {
+    max-width: 460px;
+    padding: 14px;
+    border-radius: 40px;
+    font-size: 25px
+  }
+}
+@media screen and (min-width:1024px) {
+  .life {
+    margin: 100px 0 50px
+  }
+  .life__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 100px
+  }
+  .life h2 {
+    margin-bottom: 0;
+    text-align: left
+  }
+}
+.footer {
+  padding-bottom: 14px
+}
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 30px
+}
+.footer__logo {
+  max-width: 81px;
+  margin-top: auto
+}
+.footer__certificate img {
+  max-width: 46px;
+  height: 21px;
+  margin-bottom: 3px;
+  margin-left: auto
+}
+.footer__certificate p {
+  font-size: 6px;
+  line-height: 12px;
+  color: var(--black)
+}
+@media screen and (min-width:768px) {
+  .footer {
+    padding-bottom: 50px
+  }
+  .footer__logo {
+    max-width: 181px
+  }
+  .footer__certificate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
+  .footer__certificate img {
+    max-width: 95px;
+    height: 42px;
+    margin-bottom: 0;
+    margin-right: 20px
+  }
+  .footer__certificate p {
+    font-size: 14px;
+    line-height: 30px
   }
 }
