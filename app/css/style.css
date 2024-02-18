@@ -1224,6 +1224,10 @@ h1 {
     font-size: 30px;
     line-height: 61px
   }
+  .users h2 {
+    font-size: 30px;
+    line-height: 61px
+  }
   .users__title__desc {
     font-size: 30px;
     line-height: 61px;
