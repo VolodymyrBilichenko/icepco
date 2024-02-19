@@ -32,12 +32,6 @@ inputs.forEach(input => {
 
 // slider sum //
 
-const slider = document.getElementById("range");
-const txtSum = document.getElementById("value");
-
-slider.oninput = function() {
-    txtSum.textContent = this.value.toLocaleString('us-USD') + ' $';
-};
 
 const sliderEl = document.querySelector("#range")
 const sliderValue = document.querySelector(".value")
@@ -51,3 +45,4 @@ sliderEl.addEventListener("input", (event) => {
  
   sliderEl.style.background = `linear-gradient(to right, ${progress}%, ${progress}%)`;
 })
+
