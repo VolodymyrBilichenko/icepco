@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <!-- ** STYLE ** -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- Fav-icon -->
     <!-- <link rel="icon" type="image/png" href="./img/fav.ico"> -->
@@ -54,13 +54,13 @@
 <main>
     <section class="banner">
         <div class="container">
-            <h1 class="animate__animated animate__fadeInDown">
+            <h1 data-aos="fade-down">
                 <span>Инвестирование</span> в Korea Electric Power Corporation (KEPCO) 
                 устойчивую энергетику И ЗАРАБАТЫВАЙТЕ 
                 <span>ДО 10 000 долларов</span> КАЖДЫЙ МЕСЯЦ.
             </h1>
             <div class="banner__inner">
-                <div class="banner__video animate__animated animate__fadeInRight">
+                <div class="banner__video" data-aos="fade-right">
                     <iframe
                         src="https://www.youtube.com/embed/PeU2sAIOH84?si=C_7ZNKJIHw57UfZ0" 
                         title="YouTube video player" 
@@ -69,7 +69,7 @@
                         allowfullscreen>
                     </iframe>
                 </div>
-                <form action="" class="registration animate__animated animate__fadeInLeft">
+                <form action="" class="registration" data-aos="fade-left">
                     <label for="registration__title">
                         Регистрация
                     </label>
@@ -107,10 +107,10 @@
 
     <section class="paragraph">
         <div class="container">
-            <h2 class="animate__animated animate__fadeInDown">
+            <h2 data-aos="fade-down">
                 Устойчивое инвестирование - теперь это легко
             </h2>
-            <p class="animate__animated animate__fadeInDown">
+            <p data-aos="fade-down">
                 З простых шага, чтобы стать инвестором и получать прибыль
             </p>
         </div>
@@ -119,7 +119,7 @@
     <section class="stages">
         <div class="container">
             <ul>
-                <li class="animate__animated animate__fadeInLeft">
+                <li data-aos="fade-left">
                     <h2>
                         <span>01</span> Заполните форму
                     </h2>
@@ -134,7 +134,7 @@
                         Получи прибыль уже в первый месяц
                     </p>
                 </li>
-                <li class="animate__animated animate__fadeInLeft">
+                <li data-aos="fade-left">
                     <h2>
                         <span>02</span> Получите звонок от вашего менеджера
                     </h2>
@@ -144,7 +144,7 @@
                         понедельника по пятницу.
                     </p>
                 </li>
-                <li class="animate__animated animate__fadeInRight">
+                <li data-aos="fade-right">
                     <h2>
                         <span>03</span> Депозит
                     </h2>
@@ -152,7 +152,7 @@
                         Вложите любую сумму
                     </p>
                 </li>
-                <li class="animate__animated animate__fadeInRight">
+                <li data-aos="fade-right">
                     <h2>
                         <span>04</span> Прибыль
                     </h2>
@@ -166,12 +166,12 @@
 
     <section class="discont" id="about">
         <div class="container">
-            <h2 class="animate__animated animate__fadeInDown">
+            <h2 data-aos="fade-down">
                 Мы открываем доступ к нашей <span>Зеленой акции</span>
             </h2>
             <div class="discont__inner">
-                <img src="./img/discont-ph.png" alt="discount ph" class="animate__animated animate__fadeInLeft">
-                <div class="discount__txt animate__animated animate__fadeInRight">
+                <img src="./img/discont-ph.png" alt="discount ph" data-aos="fade-left">
+                <div class="discount__txt" data-aos="fade-right">
                     <p>
                         Мы открываем доступ к нашим Зеленым акциям. Мы разместили первые «зеленые» акции на рынке капитала в октябре 2018 года и с тех пор выпустили в общей сложности 3,5 миллиарда долларов.
                     </p>
@@ -186,13 +186,13 @@
 
     <section class="calculation">
         <div class="container">
-            <h2 class="animate__animated animate__fadeInDown">
+            <h2 data-aos="fade-down">
                 Рассчитай свою прибыль на калькуляторе
             </h2>
-            <p class="animate__animated animate__fadeInDown">
+            <p data-aos="fade-down">
                 Выберите свои инвестиции:
             </p>
-            <div class="range animate__animated animate__fadeInDown">
+            <div class="range" data-aos="fade-down">
                 <div class="range__sum">
                     <span>$</span>
                     <p class="value">
@@ -204,7 +204,7 @@
                     <input type="range" min="100" max="10000" value="3236" class="range__slider" id="range">
                 </div>
             </div>
-            <div class="calculation__profit animate__animated animate__fadeInDown">
+            <div class="calculation__profit" data-aos="fade-down">
                 <div class="calculation__profit__item">
                     <p>
                         Ваша прибыль
@@ -227,9 +227,9 @@
         </div>
     </section>
 
-    <section class="register animate__animated animate__fadeInDown">
+    <section class="register">
         <div class="container">
-            <div class="register__inner">
+            <div class="register__inner" data-aos="fade-down">
                 <form action="" class="registration">
                     <label for="registration__title">
                         Регистрация
@@ -268,7 +268,7 @@
 
     <section class="investors" id="invest">
         <div class="container">
-            <div class="investors__inner animate__animated animate__fadeInDown">
+            <div class="investors__inner" data-aos="fade-down">
                 <img class="investors__logo" src="./img/company-Ic.png" alt="company ic">
                 <div class="investors__info">
                     <h2>
@@ -331,13 +331,13 @@
 
     <section class="users" id="what">
         <div class="container">
-            <h2 class="animate__animated animate__fadeInDown">
+            <h2 data-aos="fade-down">
                 Что это
             </h2>
-            <p class="users__title__desc animate__animated animate__fadeInDown">
+            <p class="users__title__desc" data-aos="fade-down">
                 Устойчивое инвестирование - теперь это легко
             </p>
-            <ul class="animate__animated animate__fadeInDown">
+            <ul data-aos="fade-down">
                 <li>
                     <h3>
                         Прибыль 6300 $
@@ -486,10 +486,10 @@
 
     <section class="paragraph paragraph_sec">
         <div class="container">
-            <h2 class="animate__animated animate__fadeInDown">
+            <h2 data-aos="fade-down">
                 Часто задаваемые вопросы
             </h2>
-            <p class="animate__animated animate__fadeInDown">
+            <p data-aos="fade-down">
                 У вас есть еще вопросы?
             </p>
         </div>
@@ -497,7 +497,7 @@
 
     <sections class="questions" id="question">
         <div class="container">
-            <ul class="questions__list animate__animated animate__fadeInDown">
+            <ul class="questions__list" data-aos="fade-down">
                 <li>
                     <div class="questions__list__title">
                         <img src="./img/question.png" alt="question ph">
@@ -540,7 +540,7 @@
 
     <section class="life">
         <div class="container">
-            <div class="life__inner animate__animated animate__fadeInDown">
+            <div class="life__inner" data-aos="fade-down">
                 <h2>
                     Измени свою жизнь вместе с  KEPCO и повлияй на жизнь своих родных
                 </h2>
@@ -571,6 +571,11 @@
 
 <!-- swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- aos animate -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <!-- intl-tel-input -->
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/js/intlTelInput.min.js"></script>
 <!-- main JS -->
