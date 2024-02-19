@@ -4,14 +4,12 @@ const inputs = document.querySelectorAll(".phone");
 const output = document.querySelector("#output");
 
 inputs.forEach(input => {
-    // Initialize intlTelInput for each phone input
     const iti = window.intlTelInput(input, {
         initialCountry: "us",
         nationalMode: true,
         utilsScript: "/intl-tel-input/js/utils.js?1707906286003"
     });
 
-    // Handle input changes and validation
     const handleChange = () => {
         let text;
         if (input.value) {
@@ -34,20 +32,22 @@ inputs.forEach(input => {
 
 // slider sum //
 
-const slider = document.getElementById("myRange");
-const demo = document.getElementById("demo");
+const slider = document.getElementById("range");
+const txtSum = document.getElementById("value");
 
 slider.oninput = function() {
-    demo.textContent = this.value.toLocaleString('us-USD') + ' $';
+    txtSum.textContent = this.value.toLocaleString('us-USD') + ' $';
 };
 
-const range = document.getElementById("myRange");
+const sliderEl = document.querySelector("#range")
+const sliderValue = document.querySelector(".value")
 
-range.addEventListener("input", () => {
-    const value = range.value;
-    const min = range.min;
-    const max = range.max;
-    const percent = (value - min) / (max - min);
-
-    range.style.background = `linear-gradient(to right, #32acff ${percent*100}%, transparent ${percent*100}%)`;
-});
+sliderEl.addEventListener("input", (event) => {
+  const tempSliderValue = event.target.value; 
+  
+  sliderValue.textContent = tempSliderValue;
+  
+  const progress = (tempSliderValue / sliderEl.max) * 100;
+ 
+  sliderEl.style.background = `linear-gradient(to right, ${progress}%, ${progress}%)`;
+})
