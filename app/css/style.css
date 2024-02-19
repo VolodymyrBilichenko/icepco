@@ -1514,17 +1514,17 @@ h1 {
   overflow: hidden;
   border-radius: 16px;
   height: 18px;
-  background: #fff;
+  background: var(--white);
   border-radius: 16px
 }
 .range__slider::-webkit-slider-runnable-track {
   height: 16px;
-  background: #fff;
+  background: var(--white);
   border-radius: 16px
 }
 .range__slider::-moz-range-track {
   height: 18px;
-  background: #fff;
+  background: var(--white);
   border-radius: 16px;
   box-shadow: 5px 4px 12.8000001907px 0 var(--border-input)
 }
@@ -1547,43 +1547,86 @@ h1 {
   border: 1px solid var(--blue);
   box-shadow: -407px 0 0 400px var(--ocean)
 }
-.range p {
+.range__sum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: var(--range);
-  padding: 4px;
   border-radius: 15px;
   width: 100%;
   max-width: 60px;
   margin: 0 auto;
   margin-bottom: 10px;
+  padding: 2px;
+  position: relative;
+  -webkit-box-shadow: 5px 4px 12.8000001907px 0 var(--border-input);
+  box-shadow: 5px 4px 12.8000001907px 0 var(--border-input)
+}
+.range p {
   font-weight: 700;
   font-size: 10px;
   color: var(--black);
   white-space: nowrap;
-  position: relative
+  margin: 0
+}
+.range span {
+  font-weight: 700;
+  font-size: 10px;
+  margin-right: 3px
+}
+.range img {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  width: 5px;
+  height: 5px;
+  z-index: -1
 }
 @media screen and (min-width:768px) {
   .range__container {
     background: var(--white);
     padding: 5px;
-    height: 75px;
+    height: 70px;
     border-radius: 40px
   }
   .range__slider {
-    height: 65px;
-    border-radius: 40px
+    height: 60px;
+    border-radius: 40px;
+    padding-bottom: 15px
   }
   .range__slider::-webkit-slider-thumb {
-    height: 45px;
-    width: 45px;
+    height: 60px;
+    width: 60px;
     border: 3px solid var(--blue)
   }
   .range__slider::-webkit-slider-runnable-track {
     height: 45px
   }
+  .range__sum {
+    max-width: 110px;
+    border-radius: 40px;
+    height: 32px;
+    margin-bottom: 15px
+  }
   .range p {
-    padding: 5px 10px;
-    max-width: 100px;
-    font-size: 15px;
-    border-radius: 40px
+    font-size: 15px
+  }
+  .range span {
+    font-size: 12px;
+    margin-bottom: -1px
+  }
+  .range img {
+    width: 15px;
+    height: 15px;
+    bottom: -10px
   }
 }
